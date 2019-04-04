@@ -1,26 +1,25 @@
 There are different classes which has been created
-
-This class stores the inventory name and quantity
+```
+//This class stores the inventory name and quantity
 
 public class Inventory {
 	String inventoryName;
 	Long quantity;
 }
 
-This class is for storing the output of warehouse name and inventory lists
+//This class is for storing the output of warehouse name and inventory lists
 public class OutPut {
 	String wareHouseName;
 	List<String> listInventory;
 }
 
-This class is for storing the warehouse name and list of inventories
+//This class is for storing the warehouse name and list of inventories
 public class WareHouse {
 	String wareHouseName;
 	List<Inventory> listInventory = new LinkedList<>();
 }
-
-
-The mainClass.java has the whole code along with the test cases. compile and run the mainClass.java which will display the input and output as follows.
+```
+The mainClass.java has the whole code along with the test cases. Compile and run the mainClass.java which will display the input and output as follows.
 
 Test 1
 Input : { apple: 5, banana: 5, orange: 5 }, [ { name: owd, inventory: { apple: 5, orange: 10 } }, { name: dm:, inventory: { banana: 5, orange: 10 } } ]
