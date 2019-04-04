@@ -34,7 +34,7 @@ public class mainClass {
 			List<OutPut> result, int index, Long path,Long maxPath) {
 		if (mapOrders == null || listInputWareHouses == null || mapOrders.size() == 0 || listInputWareHouses.size() == 0)
 			return;
-		
+
 		if (checkIfAllOrdersProcessed(mapOrders) && path < maxPath) {
 			maxPath = path;
 			finalResult = new LinkedList<OutPut>(result);
@@ -106,7 +106,7 @@ public class mainClass {
 
 		findShortestPath(mapOrders, listInputWareHouses, new LinkedList<OutPut>(), 0, (long) 0,Long.MAX_VALUE);
 		printResult(finalResult);
-		
+
 //		Test 2
 		System.out.println("\n");
 		System.out.println("Test 2");
@@ -115,13 +115,13 @@ public class mainClass {
 		listInputWareHouses.clear();
 		listInventories.clear();
 		finalResult.clear();
-		
+
 		mapOrders.put("apple", (long) 1);
 		listInventories.add(new Inventory("apple", (long) 0));
 		listInputWareHouses.add(new WareHouse("owd", listInventories));
 		findShortestPath(mapOrders, listInputWareHouses, new LinkedList<OutPut>(), 0, (long) 0,Long.MAX_VALUE);
 		printResult(finalResult);
-		
+
 //		Test 3
 		System.out.println("\n");
 		System.out.println("Test 3");
@@ -132,7 +132,7 @@ public class mainClass {
 		finalResult.clear();
 		findShortestPath(mapOrders, listInputWareHouses, new LinkedList<OutPut>(), 0, (long) 0,Long.MAX_VALUE);
 		printResult(finalResult);
-		
+
 //		Test 4
 		System.out.println("\n");
 		System.out.println("Test 4");
@@ -141,13 +141,13 @@ public class mainClass {
 		listInputWareHouses.clear();
 		listInventories.clear();
 		finalResult.clear();
-		
+
 		mapOrders.put("apple", (long) 1);
 		listInventories.add(new Inventory("apple", (long) 1));
 		listInputWareHouses.add(new WareHouse("owd", listInventories));
 		findShortestPath(mapOrders, listInputWareHouses, new LinkedList<OutPut>(), 0, (long) 0,Long.MAX_VALUE);
 		printResult(finalResult);
-		
+
 //		Test 5
 		System.out.println("\n");
 		System.out.println("Test 5");
@@ -156,11 +156,11 @@ public class mainClass {
 		listInputWareHouses.clear();
 		listInventories.clear();
 		finalResult.clear();
-		
+
 		mapOrders.put("apple", (long) 10);
 		listInventories.add(new Inventory("apple", (long) 5));
 		listInputWareHouses.add(new WareHouse("owd", listInventories));
-		
+
 		listInventories.clear();
 		listInventories.add(new Inventory("apple", (long) 10));
 
@@ -168,20 +168,20 @@ public class mainClass {
 
 		findShortestPath(mapOrders, listInputWareHouses, new LinkedList<OutPut>(), 0, (long) 0,Long.MAX_VALUE);
 		printResult(finalResult);
-		
+
 //		Test 6
 		System.out.println("\n");
-		System.out.println("Test 5");
+		System.out.println("Test 6");
 		System.out.println("Input: { apple: 10 }, [{ name: owd, inventory: { apple: 5 } }, { name: dm, inventory: { apple: 5 }}]");
 		mapOrders.clear();
 		listInputWareHouses.clear();
 		listInventories.clear();
 		finalResult.clear();
-		
+
 		mapOrders.put("apple", (long) 10);
 		listInventories.add(new Inventory("apple", (long) 5));
 		listInputWareHouses.add(new WareHouse("owd", listInventories));
-		
+
 		listInventories.clear();
 		listInventories.add(new Inventory("apple", (long) 5));
 
@@ -189,6 +189,6 @@ public class mainClass {
 
 		findShortestPath(mapOrders, listInputWareHouses, new LinkedList<OutPut>(), 0, (long) 0,Long.MAX_VALUE);
 		printResult(finalResult);
-		
+
 	}
 }
